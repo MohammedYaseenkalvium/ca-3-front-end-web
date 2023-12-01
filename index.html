@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA-3</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <section id="topSection">
+        <div class="main-container">
+            <nav id="navbar">
+                <img src="./assests/Screenshot 2023-11-28 155122.png" alt="" id="logo">
+                <form onsubmit="event.preventDefault(); searchMeal();">
+                    <input type="text" placeholder="Search" id="Search">
+                    <button type="submit" id="Homebtn">Search</button>
+                </form>
+                <button id="Homebtn">Home</button>
+            </nav>
+            <div id="introcontent1">
+                <div id="bg1">
+                    <div id="newdiv">
+                        <p id="call">Savor the Symphony: Your Culinary Adventure Begins Here!</p>
+                    </div>
+                    <div id="description">
+                        <p id="intro">
+                            "Indulge in culinary wonders at 'Your Meals.' Uncover the magic in each bite, where flavors tell
+                            stories, and every dish is a masterpiece waiting to be savored. Elevate your dining with us – a
+                            symphony of taste in every experience."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="random-section">
+        <div id="randomdiv">
+            <div>
+                <p id="hellorandom">"Have confusion Trust the Randomness, Taste the Surprise!</p>
+                <img src="" alt="" id="randomness">
+                <p id="randomname"></p>
+                <button onclick="openModal()">Try it now</button>
+            </div>
+        </div>
+    </section>
+    <section id="Searchs">
+        <div id="searchresult">
+            <p id="searchh">Search result(<span class="searchres"></span>)</p>
+            <div id="cards" class="cards-container"></div>
+        </div>
+    </section>
+    <section id="footer">
+            <p id="footer-content">&copy; 2023 Your Meals. All rights reserved.</p>
+    </section>
+    <div id="mymodal" class="modal">
+        <div class="modalcontent">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img src="" alt="" id="modalimg">
+            <p id="modals"></p>
+            <ul id="ingredients-list"></ul>
+        </div>
+    </div>
+        </body>
+    <script src="./app.js"></script>
+</html>
+    
+  
+
