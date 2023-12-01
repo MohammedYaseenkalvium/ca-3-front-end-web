@@ -332,7 +332,7 @@ button {
     background-color: #313131;
     color: #fff;
 }
-@media (max-width: 425px){
+@media screen and (max-width: 425px){
     #Search {
         width: 172px;
         height: 24px;
