@@ -78,6 +78,7 @@ body {
     /* z-index: 1; */
     text-align: center;
     
+    
 }
 
 #introcontent1 {
@@ -174,7 +175,7 @@ body {
     color: #ffff;
 }
 
-#cards {
+/* #cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
@@ -219,42 +220,243 @@ button{
     padding: 20px;
     text-align: center;
     width: 100%;
+} */
+#cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1%;
+}
+
+#card {
+    background: rgba(60, 60, 60, 0.35);
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+#foodname {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+button {
+    background-color: green;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    cursor: pointer; /* Add cursor property for better UX */
+}
+
+#mymodal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #footer-content {
     font-size: 14px;
 }
-.modal{
+.modal {
     display: none;
     position: fixed;
-    top: 25%;
-    left: 25%;
-    width: 70%;
-    height: 70%;
-   
-    background-color: rgba(144, 142, 142, 0.737);
-    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
 .modal-content {
-    background-color: #fefefe;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
+    width: 70%;
+    max-width: 600px;
+    text-align: center;
 }
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+
+.modal-header {
+    margin-bottom: 10px;
+    font-size: 18px;
 }
-.close:hover,.close:focus {
-    color: black;
+
+.ing-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ing-list li {
+    margin-bottom: 5px;
+}
+
+.youtube-btn {
+    display: block;
+    margin-top: 15px;
+    background-color: #f00;
+    color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
-    cursor: pointer;
+    border-radius: 5px;
 }
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 1%;
+#modalimg{
+    width: 100px;
+    
+}
+#footer{
+    text-align: center;
+    background-color: #313131;
+    color: #fff;
+}
+@media (max-width: 425px){
+    #Search {
+        width: 172px;
+        height: 24px;
+        border-radius: 50px;
+        padding: 10px;
+    }
+    #logo {
+        width: 53px;
+    }
+    #Homebtn {
+        background-color: rgb(92, 92, 92);
+        color: white;
+        padding: 5px 5px;
+        border: none;
+        border-radius: 15px;
+        font-size: 10px;
+        font-family: 'ARIAL';
+        margin: 2px;
+    }
+    #call {
+        font-size: 30px;
+        font-family: 'Ephesis';
+        color: white;
+        z-index: 1;
+        text-align: center;
+        margin-top: 75px;
+    }
+    #topSection {
+        background-image: url(./assests/4a4f4ea2-3e53-4ad2-b940-a2c1f89e07ea\ 1\ \(1\).png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 90vh;
+        width: 100%;
+    }
+    #hellorandom {
+        color: #ffff;
+        font-size: 28px;
+        text-shadow: 0 0 10px rgb(207, 189, 86);
+        margin-top: 15%;
+    }
+    #randomness {
+        margin-top: 15%;
+        width: 50%;
+        height: 40%;
+        filter: drop-shadow(0px 0 0px gold);
+        animation: glow 1.5s ease-in-out infinite alternate;
+        margin-bottom: 10%;
+    }
+    
+    #intro {
+        font-size: 20px;
+        font-family: 'font-family: 'Cabinet Grotesk', sans-serif;';
+        color: #ffff;
+        /* z-index: 1; */
+        text-align: center;
+        width: 60vw;
+    }
+    #img {
+        height: 20vh;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+}
+@media (max-width: 400px){
+    #Search {
+        width: 172px;
+        height: 24px;
+        border-radius: 50px;
+        padding: 10px;
+    }
+    #logo {
+        width: 53px;
+    }
+    #Homebtn {
+        background-color: rgb(92, 92, 92);
+        color: white;
+        padding: 5px 5px;
+        border: none;
+        border-radius: 15px;
+        font-size: 10px;
+        font-family: 'ARIAL';
+        margin: 2px;
+    }
+    #call {
+        font-size: 30px;
+        font-family: 'Ephesis';
+        color: white;
+        z-index: 1;
+        text-align: center;
+        margin-top: 75px;
+    }
+    #topSection {
+        background-image: url(./assests/4a4f4ea2-3e53-4ad2-b940-a2c1f89e07ea\ 1\ \(1\).png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 90vh;
+        width: 100%;
+    }
+    #hellorandom {
+        color: #ffff;
+        font-size: 28px;
+        text-shadow: 0 0 10px rgb(207, 189, 86);
+        margin-top: 15%;
+    }
+    #randomness {
+        margin-top: 15%;
+        width: 50%;
+        height: 40%;
+        filter: drop-shadow(0px 0 0px gold);
+        animation: glow 1.5s ease-in-out infinite alternate;
+        margin-bottom: 10%;
+    }
+    
+    #intro {
+        font-size: 20px;
+        font-family: 'font-family: 'Cabinet Grotesk', sans-serif;';
+        color: #ffff;
+        /* z-index: 1; */
+        text-align: center;
+        width: 60vw;
+    }
+    #img {
+        height: 20vh;
+        border-radius: 10px;
+        object-fit: cover;
+    }
 }
